@@ -84,7 +84,12 @@ class Game{
         if(this.resultMessage!=0){
             return this.resultMessage
         }
-        return 1     
+        if(this.turn%2==0){
+            return("Cell number "+cellNumberToBeMarked+" marked successfully by Player 2 "+this.players[1].name+". Next turn is Player 1 "+this.players[0].name+"'s turn")
+        }
+        else{
+            return("Cell number "+cellNumberToBeMarked+" marked successfully by Player 1 "+this.players[0].name+". Next turn is Player 2 "+this.players[1].name+"'s turn")
+        }
     }
 }
 

@@ -35,9 +35,6 @@ app.post('/api/v1/playGame', (req, resp) => {
     }
     else{
     let statusMessage = AllGames[AllGames.length-1].play(cellNumberToBeMarked)
-    if(statusMessage==1){
-        statusMessage = "Cell number "+cellNumberToBeMarked+" marked successfully. Play next turn"
-    }
     resp.status(201).send(statusMessage)
     }
 })
